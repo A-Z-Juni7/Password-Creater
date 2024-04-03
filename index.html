@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" sizes="32x32" href="./assets/images/techover.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap" rel="stylesheet">
+  <title>Lösenords Generator</title>
+</head>
+<body>
+
+  <div class="gContainer">
+    <p> Password Generator </p>
+
+    <div class="Outputs">
+      <input type="text" id="password" value="..............." readonly>
+      <button id="copyButton"><img src="/images/copy-icon.svg" alt="Copy" ></button>
+    </div>
+
+
+    <div class="passwordOptions">
+      <div class="rangeCharatery">
+        <div class="cHaratery">
+          <p> Character Length </p>
+          <p id="rangeValue">0</p>
+        </div>
+        <input type="range" id="range1" class="range-input" name="range1" min="0" max="15" value="0" oninput="rangeValue.innerText = this.value ">
+      </div>
+
+      <div class="checkOptions">
+
+        <input type="checkbox" id="uppercaseCheckbox">
+        <label for="uppercaseCheckbox">Include Uppercase Letters</label>
+
+        <input type="checkbox" id="lowercaseCheckbox" checked>
+        <label for="lowercaseCheckbox">Include Lowercase Letters</label>
+
+        <input type="checkbox" id="numbersCheckbox" checked>
+        <label for="numbersCheckbox">Include Numbers</label>
+
+        <input type="checkbox" id="symbolsCheckbox">
+        <label for="symbolsCheckbox">Include Symbols</label>
+      </div>
+
+      <!-- <div class="strngthView">
+           -->
+          <div class="strength-bar">
+            <div id="cStrangth"><p>Strength</p></div>
+            <div class="progress">
+              <p id="sTpower"></p>
+              <div id="Weak"></div>
+              <div id="ModeratelyStrong"></div>
+              <div id="Strong"></div>
+              <div id="veryStrong"></div>
+            </div>
+          </div> 
+             <button class="generatePassword" onclick="generatePassword()">Generate</button>
+      <!-- </div> -->
+    </div>
+
+    <img id="azad" src="/images/A-Z-Juni7-logo1.png" />
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
